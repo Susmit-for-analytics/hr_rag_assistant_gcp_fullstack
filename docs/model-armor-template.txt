@@ -1,0 +1,24 @@
+createTime: '2026-09-10T19:43:20.314297992Z'
+filterConfig:
+  maliciousUriFilterSettings:
+    filterEnforcement: ENABLED
+  piAndJailbreakFilterSettings:
+    confidenceLevel: HIGH
+    filterEnforcement: ENABLED
+  raiSettings:
+    raiFilters:
+    - confidenceLevel: HIGH
+      filterType: HATE_SPEECH
+    - confidenceLevel: HIGH
+      filterType: HARASSMENT
+    - confidenceLevel: HIGH
+      filterType: DANGEROUS
+    - confidenceLevel: HIGH
+      filterType: SEXUALLY_EXPLICIT
+  sdpSettings:
+    basicConfig:
+      filterEnforcement: ENABLED
+name: projects/idyllic-kit-466219-h5/locations/us/templates/hr-assistant-guardrail
+templateMetadata:
+  dataResidencyCompliant: true
+updateTime: '2026-09-10T19:43:20.694422812Z'

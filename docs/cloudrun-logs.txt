@@ -1,0 +1,195 @@
+2026-09-11 16:56:18   PydanticSerializationUnexpectedValue(Expected `Generation` - serialized value may not be as expected [field_name='generations', input_value=ChatGeneration(generation..., 'total_tokens': 763})), input_type=ChatGeneration])
+2026-09-11 16:56:18   PydanticSerializationUnexpectedValue(Expected `BaseMessage` - serialized value may not be as expected [field_name='message', input_value=AIMessage(content='', add...1, 'total_tokens': 763}), input_type=AIMessage])
+2026-09-11 16:56:18   PydanticSerializationUnexpectedValue(Expected `GenerationChunk` - serialized value may not be as expected [field_name='generations', input_value=ChatGeneration(generation..., 'total_tokens': 763})), input_type=ChatGeneration])
+2026-09-11 16:56:18   PydanticSerializationUnexpectedValue(Expected `ChatGenerationChunk` - serialized value may not be as expected [field_name='generations', input_value=ChatGeneration(generation..., 'total_tokens': 763})), input_type=ChatGeneration])
+2026-09-11 16:56:18   return self.__pydantic_serializer__.to_python(
+2026-09-11 16:56:19 16:56:19 - LiteLLM:INFO: utils.py:4193 - 
+2026-09-11 16:56:19 LiteLLM completion() model= gemini-3.1-flash-lite; provider = vertex_ai
+2026-09-11 16:56:19 LiteLLM completion() model= gemini-3.1-flash-lite; provider = vertex_ai
+2026-09-11 16:56:19 16:56:19 - LiteLLM:INFO: vertex_and_google_ai_studio_gemini.py:1080 - Warning: Setting temperature < 1.0 for Gemini 3 models (gemini-3.1-flash-lite) can cause infinite loops, degraded reasoning performance, and failure on complex tasks. Strongly recommended to use temperature = 1.0 (default).
+2026-09-11 16:56:19 Warning: Setting temperature < 1.0 for Gemini 3 models (gemini-3.1-flash-lite) can cause infinite loops, degraded reasoning performance, and failure on complex tasks. Strongly recommended to use temperature = 1.0 (default).
+2026-09-11 16:56:19 16:56:19 - LiteLLM:WARNING: vertex_and_google_ai_studio_gemini.py:1085 - DeprecationWarning: `temperature`, `top_p`, and `top_k` continue to function for Gemini 3+ (gemini-3.1-flash-lite) but are planned for removal in a future release. Move sampling guidance into the `system` instructions instead.
+2026-09-11 16:56:19 DeprecationWarning: `temperature`, `top_p`, and `top_k` continue to function for Gemini 3+ (gemini-3.1-flash-lite) but are planned for removal in a future release. Move sampling guidance into the `system` instructions instead.
+2026-09-11 16:56:20 16:56:20 - LiteLLM:INFO: utils.py:1646 - Wrapper: Completed Call, calling success_handler
+2026-09-11 16:56:20 Wrapper: Completed Call, calling success_handler
+2026-09-11 16:56:20 16:56:20 - LiteLLM Router:INFO: router.py:2181 - litellm.completion(model=vertex_ai/gemini-3.1-flash-lite)[32m 200 OK[0m
+2026-09-11 16:56:20 litellm.completion(model=vertex_ai/gemini-3.1-flash-lite)[32m 200 OK[0m
+2026-09-11 16:56:20 /usr/local/lib/python3.11/site-packages/pydantic/main.py:475: UserWarning: Pydantic serializer warnings:
+2026-09-11 16:56:20   PydanticSerializationUnexpectedValue(Expected `Generation` - serialized value may not be as expected [field_name='generations', input_value=ChatGeneration(text='To a... 'total_tokens': 1395})), input_type=ChatGeneration])
+2026-09-11 16:56:20   PydanticSerializationUnexpectedValue(Expected `BaseMessage` - serialized value may not be as expected [field_name='message', input_value=AIMessage(content='To app..., 'total_tokens': 1395}), input_type=AIMessage])
+2026-09-11 16:56:20   PydanticSerializationUnexpectedValue(Expected `GenerationChunk` - serialized value may not be as expected [field_name='generations', input_value=ChatGeneration(text='To a... 'total_tokens': 1395})), input_type=ChatGeneration])
+2026-09-11 16:56:20   PydanticSerializationUnexpectedValue(Expected `ChatGenerationChunk` - serialized value may not be as expected [field_name='generations', input_value=ChatGeneration(text='To a... 'total_tokens': 1395})), input_type=ChatGeneration])
+2026-09-11 16:56:20   return self.__pydantic_serializer__.to_python(
+2026-09-11 16:56:20 OUTPUT GUARDRAIL: pass (ok)
+2026-09-11 16:57:26 LangSmith tracing ENABLED - project 'hrragwithgcp', traces at https://smith.langchain.com
+2026-09-11 16:57:26 INPUT GUARDRAIL: pass (ok)
+2026-09-11 16:57:30 CACHE HIT (similarity=0.946 vs 'ok i want to get leave for 10 days what is the process') ? skipping retrieval + LLM
+2026-09-11 16:58:01 GET 200 https://hr-rag-assistant-1040239158976.us-central1.run.app/_stcore/health
+2026-09-11 16:58:01 GET 200 https://hr-rag-assistant-1040239158976.us-central1.run.app/_stcore/host-config
+2026-09-11 16:58:01 GET 101 https://hr-rag-assistant-1040239158976.us-central1.run.app/_stcore/stream
+2026-09-11 16:58:45 LangSmith tracing ENABLED - project 'hrragwithgcp', traces at https://smith.langchain.com
+2026-09-11 16:58:48 GET 302 https://hr-rag-assistant-1040239158976.us-central1.run.app/auth/logout
+2026-09-11 16:58:49 HTTP Request: GET https://accounts.google.com/.well-known/openid-configuration "HTTP/1.1 200 OK"
+2026-09-11 16:58:49 2026-09-11 16:58:49.800 No end_session_endpoint found for provider google
+2026-09-11 16:58:50 GET 304 https://hr-rag-assistant-1040239158976.us-central1.run.app/
+2026-09-11 16:58:50 Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+2026-09-11 16:58:50 GET 200 https://hr-rag-assistant-1040239158976.us-central1.run.app/_stcore/host-config
+2026-09-11 16:58:50 GET 200 https://hr-rag-assistant-1040239158976.us-central1.run.app/_stcore/health
+2026-09-11 16:58:50 GET 101 https://hr-rag-assistant-1040239158976.us-central1.run.app/_stcore/stream
+2026-09-11 16:58:51 LangSmith tracing ENABLED - project 'hrragwithgcp', traces at https://smith.langchain.com
+2026-09-11 16:58:51 2026-09-11 16:58:51.485 Uvicorn server started on 0.0.0.0:8080
+2026-09-11 16:58:53   You can now view your Streamlit app in your browser.
+2026-09-11 16:58:53   Local URL: http://localhost:8080
+2026-09-11 16:58:53   Network URL: http://169.254.8.1:8080
+2026-09-11 16:58:53   External URL: http://136.124.32.194:8080
+2026-09-11 16:58:56 LangSmith tracing ENABLED - project 'hrragwithgcp', traces at https://smith.langchain.com
+2026-09-11 16:58:56 GET 302 https://hr-rag-assistant-1040239158976.us-central1.run.app/auth/login?provider=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwcm92aWRlciI6Imdvb2dsZSIsImV4cCI6MTc4OTE0NjA1Nn0.lIcyDvP_I6YvkVfyz_I2bidlxmMLuWO9SMwR_UIm4-o
+2026-09-11 16:58:57 HTTP Request: GET https://accounts.google.com/.well-known/openid-configuration "HTTP/1.1 200 OK"
+2026-09-11 16:59:27 GET 302 https://hr-rag-assistant-1040239158976.us-central1.run.app/oauth2callback?state=zF22hCb6IGAsuo8ZUqRia1xVxU66tO&iss=https://accounts.google.com&code=4/0ATsMZqA6uDylw1l4ybY2eXULPJHJ7tR3vooOCBG5mqtDAUzHSfPg-PtK_ptdROA4LBOriA&scope=email+profile+https://www.googleapis.com/auth/userinfo.email+openid+https://www.googleapis.com/auth/userinfo.profile&authuser=0&prompt=none
+2026-09-11 16:59:27 HTTP Request: GET https://accounts.google.com/.well-known/openid-configuration "HTTP/1.1 200 OK"
+2026-09-11 16:59:27 HTTP Request: POST https://oauth2.googleapis.com/token "HTTP/1.1 200 OK"
+2026-09-11 16:59:27 HTTP Request: GET https://www.googleapis.com/oauth2/v3/certs "HTTP/1.1 200 OK"
+2026-09-11 16:59:27 GET 304 https://hr-rag-assistant-1040239158976.us-central1.run.app/
+2026-09-11 16:59:28 GET 200 https://hr-rag-assistant-1040239158976.us-central1.run.app/_stcore/health
+2026-09-11 16:59:28 GET 200 https://hr-rag-assistant-1040239158976.us-central1.run.app/_stcore/host-config
+2026-09-11 16:59:29 GET 101 https://hr-rag-assistant-1040239158976.us-central1.run.app/_stcore/stream
+2026-09-11 16:59:29 LangSmith tracing ENABLED - project 'hrragwithgcp', traces at https://smith.langchain.com
+2026-09-11 16:59:34 LangSmith tracing ENABLED - project 'hrragwithgcp', traces at https://smith.langchain.com
+2026-09-11 16:59:35 GET 302 https://hr-rag-assistant-1040239158976.us-central1.run.app/auth/logout
+2026-09-11 16:59:35 HTTP Request: GET https://accounts.google.com/.well-known/openid-configuration "HTTP/1.1 200 OK"
+2026-09-11 16:59:35 2026-09-11 16:59:35.262 No end_session_endpoint found for provider google
+2026-09-11 16:59:35 GET 304 https://hr-rag-assistant-1040239158976.us-central1.run.app/
+2026-09-11 16:59:35 GET 200 https://hr-rag-assistant-1040239158976.us-central1.run.app/_stcore/health
+2026-09-11 16:59:35 GET 200 https://hr-rag-assistant-1040239158976.us-central1.run.app/_stcore/host-config
+2026-09-11 16:59:36 GET 101 https://hr-rag-assistant-1040239158976.us-central1.run.app/_stcore/stream
+2026-09-11 16:59:36 LangSmith tracing ENABLED - project 'hrragwithgcp', traces at https://smith.langchain.com
+2026-09-11 17:04:38 GET 200 https://hr-rag-assistant-1040239158976.us-central1.run.app/_stcore/host-config
+2026-09-11 17:04:38 GET 200 https://hr-rag-assistant-1040239158976.us-central1.run.app/_stcore/health
+2026-09-11 17:04:38 GET 101 https://hr-rag-assistant-1040239158976.us-central1.run.app/_stcore/stream
+2026-09-11 17:09:41 GET 200 https://hr-rag-assistant-1040239158976.us-central1.run.app/_stcore/host-config
+2026-09-11 17:09:41 GET 200 https://hr-rag-assistant-1040239158976.us-central1.run.app/_stcore/health
+2026-09-11 17:09:41 GET 101 https://hr-rag-assistant-1040239158976.us-central1.run.app/_stcore/stream
+2026-09-11 17:14:15 LangSmith tracing ENABLED - project 'hrragwithgcp', traces at https://smith.langchain.com
+2026-09-11 17:14:18 GET 302 https://hr-rag-assistant-1040239158976.us-central1.run.app/auth/login?provider=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwcm92aWRlciI6Imdvb2dsZSIsImV4cCI6MTc4OTE0Njk3NX0.nDDQ_6S0i45igqy-sMy00xR4qxZ3scIan76ua3TQFdA
+2026-09-11 17:14:19 HTTP Request: GET https://accounts.google.com/.well-known/openid-configuration "HTTP/1.1 200 OK"
+2026-09-11 17:14:20 Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+2026-09-11 17:14:21 2026-09-11 17:14:21.322 Uvicorn server started on 0.0.0.0:8080
+2026-09-11 17:14:22   You can now view your Streamlit app in your browser.
+2026-09-11 17:14:22   Local URL: http://localhost:8080
+2026-09-11 17:14:22   Network URL: http://169.254.8.1:8080
+2026-09-11 17:14:22   External URL: http://34.96.44.131:8080
+2026-09-11 17:15:09 GET 302 https://hr-rag-assistant-1040239158976.us-central1.run.app/oauth2callback?state=wyEQVLPmQKxcr7NmPXC2sJhgJlBzCp&iss=https://accounts.google.com&code=4/0ATsMZqBpud4Z7xRhfhj4Eolh7ZgOEnk0zIfuwQDWuZgqhcRdBk_sbyY-LK6FUSX7IMYNlQ&scope=email+profile+https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/userinfo.profile+openid&authuser=0&prompt=none
+2026-09-11 17:15:09 HTTP Request: GET https://accounts.google.com/.well-known/openid-configuration "HTTP/1.1 200 OK"
+2026-09-11 17:15:10 HTTP Request: POST https://oauth2.googleapis.com/token "HTTP/1.1 200 OK"
+2026-09-11 17:15:10 HTTP Request: GET https://www.googleapis.com/oauth2/v3/certs "HTTP/1.1 200 OK"
+2026-09-11 17:15:10 GET 304 https://hr-rag-assistant-1040239158976.us-central1.run.app/
+2026-09-11 17:15:11 GET 101 https://hr-rag-assistant-1040239158976.us-central1.run.app/_stcore/stream
+2026-09-11 17:15:11 LangSmith tracing ENABLED - project 'hrragwithgcp', traces at https://smith.langchain.com
+2026-09-11 17:15:20 LangSmith tracing ENABLED - project 'hrragwithgcp', traces at https://smith.langchain.com
+2026-09-11 17:15:20 INPUT GUARDRAIL: pass (ok)
+2026-09-11 17:15:20 CACHE MISS (best similarity=0.923)
+2026-09-11 17:15:20 17:15:20 - LiteLLM:INFO: utils.py:4193 - 
+2026-09-11 17:15:20 LiteLLM completion() model= gemini-3.1-flash-lite; provider = vertex_ai
+2026-09-11 17:15:20 LiteLLM completion() model= gemini-3.1-flash-lite; provider = vertex_ai
+2026-09-11 17:15:20 17:15:20 - LiteLLM:INFO: vertex_and_google_ai_studio_gemini.py:1080 - Warning: Setting temperature < 1.0 for Gemini 3 models (gemini-3.1-flash-lite) can cause infinite loops, degraded reasoning performance, and failure on complex tasks. Strongly recommended to use temperature = 1.0 (default).
+2026-09-11 17:15:20 Warning: Setting temperature < 1.0 for Gemini 3 models (gemini-3.1-flash-lite) can cause infinite loops, degraded reasoning performance, and failure on complex tasks. Strongly recommended to use temperature = 1.0 (default).
+2026-09-11 17:15:20 17:15:20 - LiteLLM:WARNING: vertex_and_google_ai_studio_gemini.py:1085 - DeprecationWarning: `temperature`, `top_p`, and `top_k` continue to function for Gemini 3+ (gemini-3.1-flash-lite) but are planned for removal in a future release. Move sampling guidance into the `system` instructions instead.
+2026-09-11 17:15:20 DeprecationWarning: `temperature`, `top_p`, and `top_k` continue to function for Gemini 3+ (gemini-3.1-flash-lite) but are planned for removal in a future release. Move sampling guidance into the `system` instructions instead.
+2026-09-11 17:15:21 17:15:21 - LiteLLM:INFO: utils.py:1646 - Wrapper: Completed Call, calling success_handler
+2026-09-11 17:15:21 Wrapper: Completed Call, calling success_handler
+2026-09-11 17:15:21 17:15:21 - LiteLLM Router:INFO: router.py:2181 - litellm.completion(model=vertex_ai/gemini-3.1-flash-lite)[32m 200 OK[0m
+2026-09-11 17:15:21 litellm.completion(model=vertex_ai/gemini-3.1-flash-lite)[32m 200 OK[0m
+2026-09-11 17:15:21 /usr/local/lib/python3.11/site-packages/pydantic/main.py:475: UserWarning: Pydantic serializer warnings:
+2026-09-11 17:15:21   PydanticSerializationUnexpectedValue(Expected `Generation` - serialized value may not be as expected [field_name='generations', input_value=ChatGeneration(text='I am..., 'total_tokens': 636})), input_type=ChatGeneration])
+2026-09-11 17:15:21   PydanticSerializationUnexpectedValue(Expected `BaseMessage` - serialized value may not be as expected [field_name='message', input_value=AIMessage(content='I am t...6, 'total_tokens': 636}), input_type=AIMessage])
+2026-09-11 17:15:21   PydanticSerializationUnexpectedValue(Expected `GenerationChunk` - serialized value may not be as expected [field_name='generations', input_value=ChatGeneration(text='I am..., 'total_tokens': 636})), input_type=ChatGeneration])
+2026-09-11 17:15:21   PydanticSerializationUnexpectedValue(Expected `ChatGenerationChunk` - serialized value may not be as expected [field_name='generations', input_value=ChatGeneration(text='I am..., 'total_tokens': 636})), input_type=ChatGeneration])
+2026-09-11 17:15:21   return self.__pydantic_serializer__.to_python(
+2026-09-11 17:15:21 OUTPUT GUARDRAIL: pass (ok)
+2026-09-11 17:16:46 LangSmith tracing ENABLED - project 'hrragwithgcp', traces at https://smith.langchain.com
+2026-09-11 17:16:46 INPUT GUARDRAIL: pass (ok)
+2026-09-11 17:16:51 CACHE MISS (best similarity=0.902)
+2026-09-11 17:16:51 17:16:51 - LiteLLM:INFO: utils.py:4193 - 
+2026-09-11 17:16:51 LiteLLM completion() model= gemini-3.1-flash-lite; provider = vertex_ai
+2026-09-11 17:16:51 LiteLLM completion() model= gemini-3.1-flash-lite; provider = vertex_ai
+2026-09-11 17:16:51 17:16:51 - LiteLLM:INFO: vertex_and_google_ai_studio_gemini.py:1080 - Warning: Setting temperature < 1.0 for Gemini 3 models (gemini-3.1-flash-lite) can cause infinite loops, degraded reasoning performance, and failure on complex tasks. Strongly recommended to use temperature = 1.0 (default).
+2026-09-11 17:16:51 Warning: Setting temperature < 1.0 for Gemini 3 models (gemini-3.1-flash-lite) can cause infinite loops, degraded reasoning performance, and failure on complex tasks. Strongly recommended to use temperature = 1.0 (default).
+2026-09-11 17:16:51 17:16:51 - LiteLLM:WARNING: vertex_and_google_ai_studio_gemini.py:1085 - DeprecationWarning: `temperature`, `top_p`, and `top_k` continue to function for Gemini 3+ (gemini-3.1-flash-lite) but are planned for removal in a future release. Move sampling guidance into the `system` instructions instead.
+2026-09-11 17:16:51 DeprecationWarning: `temperature`, `top_p`, and `top_k` continue to function for Gemini 3+ (gemini-3.1-flash-lite) but are planned for removal in a future release. Move sampling guidance into the `system` instructions instead.
+2026-09-11 17:16:52 17:16:52 - LiteLLM:INFO: utils.py:1646 - Wrapper: Completed Call, calling success_handler
+2026-09-11 17:16:52 Wrapper: Completed Call, calling success_handler
+2026-09-11 17:16:52 17:16:52 - LiteLLM Router:INFO: router.py:2181 - litellm.completion(model=vertex_ai/gemini-3.1-flash-lite)[32m 200 OK[0m
+2026-09-11 17:16:52 litellm.completion(model=vertex_ai/gemini-3.1-flash-lite)[32m 200 OK[0m
+2026-09-11 17:16:52 /usr/local/lib/python3.11/site-packages/pydantic/main.py:475: UserWarning: Pydantic serializer warnings:
+2026-09-11 17:16:52   PydanticSerializationUnexpectedValue(Expected `Generation` - serialized value may not be as expected [field_name='generations', input_value=ChatGeneration(text='I am..., 'total_tokens': 687})), input_type=ChatGeneration])
+2026-09-11 17:16:52   PydanticSerializationUnexpectedValue(Expected `BaseMessage` - serialized value may not be as expected [field_name='message', input_value=AIMessage(content='I am t...2, 'total_tokens': 687}), input_type=AIMessage])
+2026-09-11 17:16:52   PydanticSerializationUnexpectedValue(Expected `GenerationChunk` - serialized value may not be as expected [field_name='generations', input_value=ChatGeneration(text='I am..., 'total_tokens': 687})), input_type=ChatGeneration])
+2026-09-11 17:16:52   PydanticSerializationUnexpectedValue(Expected `ChatGenerationChunk` - serialized value may not be as expected [field_name='generations', input_value=ChatGeneration(text='I am..., 'total_tokens': 687})), input_type=ChatGeneration])
+2026-09-11 17:16:52   return self.__pydantic_serializer__.to_python(
+2026-09-11 17:16:54 GET 200 https://hr-rag-assistant-1040239158976.us-central1.run.app/_stcore/health
+2026-09-11 17:16:54 GET 200 https://hr-rag-assistant-1040239158976.us-central1.run.app/_stcore/host-config
+2026-09-11 17:16:54 GET 101 https://hr-rag-assistant-1040239158976.us-central1.run.app/_stcore/stream
+2026-09-11 17:19:35 /usr/local/lib/python3.11/site-packages/google/api_core/_python_package_support.py:206: FutureWarning: Package google.api_core depends on grpcio, currently installed at version 1.80.0. grpcio < 1.83.0 does not support Post-Quantum Cryptography (PQC). Support for non-PQC environments is deprecated. In October 2026, Google Cloud Python packages will raise their minimum requirements (including google-api-core, grpcio, and grpcio-status) to enforce grpcio >= 1.83.0. For more details on Google Cloud's post-quantum security migration, visit: https://cloud.google.com/security/resources/post-quantum-cryptography
+2026-09-11 17:19:35   warnings.warn(
+2026-09-11 17:19:36 /usr/local/lib/python3.11/site-packages/google/auth/transport/grpc.py:44: FutureWarning: grpcio < 1.83.0 does not support Post-Quantum Cryptography (PQC). Support for non-PQC environments is deprecated. In October 2026, google-auth will raise its minimum requirements to enforce grpcio >= 1.83.0. For more details on Google Cloud's post-quantum security migration, visit: https://cloud.google.com/security/resources/post-quantum-cryptography
+2026-09-11 17:19:36   warnings.warn(
+2026-09-11 17:19:36 /usr/local/lib/python3.11/site-packages/google/api_core/_python_package_support.py:206: FutureWarning: Package google.cloud.modelarmor_v1 depends on grpcio, currently installed at version 1.80.0. grpcio < 1.83.0 does not support Post-Quantum Cryptography (PQC). Support for non-PQC environments is deprecated. In October 2026, Google Cloud Python packages will raise their minimum requirements (including google-api-core, grpcio, and grpcio-status) to enforce grpcio >= 1.83.0. For more details on Google Cloud's post-quantum security migration, visit: https://cloud.google.com/security/resources/post-quantum-cryptography
+2026-09-11 17:19:36   warnings.warn(
+2026-09-11 17:19:50 LangSmith tracing ENABLED - project 'hrragwithgcp', traces at https://smith.langchain.com
+2026-09-11 17:19:53 17:19:53 - LiteLLM Router:INFO: router.py:1205 - Routing strategy: simple-shuffle
+2026-09-11 17:19:53 Routing strategy: simple-shuffle
+2026-09-11 17:19:54 INPUT GUARDRAIL: pass (ok)
+2026-09-11 17:19:54 CACHE MISS (cache empty)
+2026-09-11 17:19:54 LiteLLM completion() model= gemini-3.1-flash-lite; provider = vertex_ai
+2026-09-11 17:19:54 17:19:54 - LiteLLM:INFO: utils.py:4193 - 
+2026-09-11 17:19:54 LiteLLM completion() model= gemini-3.1-flash-lite; provider = vertex_ai
+2026-09-11 17:19:54 17:19:54 - LiteLLM:INFO: vertex_and_google_ai_studio_gemini.py:1080 - Warning: Setting temperature < 1.0 for Gemini 3 models (gemini-3.1-flash-lite) can cause infinite loops, degraded reasoning performance, and failure on complex tasks. Strongly recommended to use temperature = 1.0 (default).
+2026-09-11 17:19:54 Warning: Setting temperature < 1.0 for Gemini 3 models (gemini-3.1-flash-lite) can cause infinite loops, degraded reasoning performance, and failure on complex tasks. Strongly recommended to use temperature = 1.0 (default).
+2026-09-11 17:19:54 17:19:54 - LiteLLM:WARNING: vertex_and_google_ai_studio_gemini.py:1085 - DeprecationWarning: `temperature`, `top_p`, and `top_k` continue to function for Gemini 3+ (gemini-3.1-flash-lite) but are planned for removal in a future release. Move sampling guidance into the `system` instructions instead.
+2026-09-11 17:19:54 DeprecationWarning: `temperature`, `top_p`, and `top_k` continue to function for Gemini 3+ (gemini-3.1-flash-lite) but are planned for removal in a future release. Move sampling guidance into the `system` instructions instead.
+2026-09-11 17:19:55 17:19:55 - LiteLLM:INFO: utils.py:1646 - Wrapper: Completed Call, calling success_handler
+2026-09-11 17:19:55 Wrapper: Completed Call, calling success_handler
+2026-09-11 17:19:55 17:19:55 - LiteLLM Router:INFO: router.py:2181 - litellm.completion(model=vertex_ai/gemini-3.1-flash-lite)[32m 200 OK[0m
+2026-09-11 17:19:55 litellm.completion(model=vertex_ai/gemini-3.1-flash-lite)[32m 200 OK[0m
+2026-09-11 17:19:55 /usr/local/lib/python3.11/site-packages/pydantic/main.py:475: UserWarning: Pydantic serializer warnings:
+2026-09-11 17:19:55   PydanticSerializationUnexpectedValue(Expected `Generation` - serialized value may not be as expected [field_name='generations', input_value=ChatGeneration(generation..., 'total_tokens': 653})), input_type=ChatGeneration])
+2026-09-11 17:19:55   PydanticSerializationUnexpectedValue(Expected `BaseMessage` - serialized value may not be as expected [field_name='message', input_value=AIMessage(content='', add...2, 'total_tokens': 653}), input_type=AIMessage])
+2026-09-11 17:19:55   PydanticSerializationUnexpectedValue(Expected `GenerationChunk` - serialized value may not be as expected [field_name='generations', input_value=ChatGeneration(generation..., 'total_tokens': 653})), input_type=ChatGeneration])
+2026-09-11 17:19:55   PydanticSerializationUnexpectedValue(Expected `ChatGenerationChunk` - serialized value may not be as expected [field_name='generations', input_value=ChatGeneration(generation..., 'total_tokens': 653})), input_type=ChatGeneration])
+2026-09-11 17:19:55   return self.__pydantic_serializer__.to_python(
+2026-09-11 17:19:55 17:19:55 - LiteLLM:INFO: utils.py:4193 - 
+2026-09-11 17:19:55 LiteLLM completion() model= gemini-3.1-flash-lite; provider = vertex_ai
+2026-09-11 17:19:55 LiteLLM completion() model= gemini-3.1-flash-lite; provider = vertex_ai
+2026-09-11 17:19:55 17:19:55 - LiteLLM:INFO: vertex_and_google_ai_studio_gemini.py:1080 - Warning: Setting temperature < 1.0 for Gemini 3 models (gemini-3.1-flash-lite) can cause infinite loops, degraded reasoning performance, and failure on complex tasks. Strongly recommended to use temperature = 1.0 (default).
+2026-09-11 17:19:55 Warning: Setting temperature < 1.0 for Gemini 3 models (gemini-3.1-flash-lite) can cause infinite loops, degraded reasoning performance, and failure on complex tasks. Strongly recommended to use temperature = 1.0 (default).
+2026-09-11 17:19:55 17:19:55 - LiteLLM:WARNING: vertex_and_google_ai_studio_gemini.py:1085 - DeprecationWarning: `temperature`, `top_p`, and `top_k` continue to function for Gemini 3+ (gemini-3.1-flash-lite) but are planned for removal in a future release. Move sampling guidance into the `system` instructions instead.
+2026-09-11 17:19:55 DeprecationWarning: `temperature`, `top_p`, and `top_k` continue to function for Gemini 3+ (gemini-3.1-flash-lite) but are planned for removal in a future release. Move sampling guidance into the `system` instructions instead.
+2026-09-11 17:19:57 17:19:57 - LiteLLM:INFO: utils.py:1646 - Wrapper: Completed Call, calling success_handler
+2026-09-11 17:19:57 Wrapper: Completed Call, calling success_handler
+2026-09-11 17:19:57 17:19:57 - LiteLLM Router:INFO: router.py:2181 - litellm.completion(model=vertex_ai/gemini-3.1-flash-lite)[32m 200 OK[0m
+2026-09-11 17:19:57 litellm.completion(model=vertex_ai/gemini-3.1-flash-lite)[32m 200 OK[0m
+2026-09-11 17:19:57 /usr/local/lib/python3.11/site-packages/pydantic/main.py:475: UserWarning: Pydantic serializer warnings:
+2026-09-11 17:19:57   PydanticSerializationUnexpectedValue(Expected `Generation` - serialized value may not be as expected [field_name='generations', input_value=ChatGeneration(text='Acco... 'total_tokens': 1398})), input_type=ChatGeneration])
+2026-09-11 17:19:57   PydanticSerializationUnexpectedValue(Expected `BaseMessage` - serialized value may not be as expected [field_name='message', input_value=AIMessage(content='Accord..., 'total_tokens': 1398}), input_type=AIMessage])
+2026-09-11 17:19:57   PydanticSerializationUnexpectedValue(Expected `GenerationChunk` - serialized value may not be as expected [field_name='generations', input_value=ChatGeneration(text='Acco... 'total_tokens': 1398})), input_type=ChatGeneration])
+2026-09-11 17:19:57   PydanticSerializationUnexpectedValue(Expected `ChatGenerationChunk` - serialized value may not be as expected [field_name='generations', input_value=ChatGeneration(text='Acco... 'total_tokens': 1398})), input_type=ChatGeneration])
+2026-09-11 17:19:57   return self.__pydantic_serializer__.to_python(
+2026-09-11 17:19:57 OUTPUT GUARDRAIL: pass (ok)
+2026-09-11 17:20:00 GET 200 https://hr-rag-assistant-1040239158976.us-central1.run.app/static/media/SourceSansVF-Italic.ttf.Bt9VkdQ3.woff2
+2026-09-11 17:21:57 GET 200 https://hr-rag-assistant-1040239158976.us-central1.run.app/_stcore/health
+2026-09-11 17:21:57 GET 200 https://hr-rag-assistant-1040239158976.us-central1.run.app/_stcore/host-config
+2026-09-11 17:22:29 LangSmith tracing ENABLED - project 'hrragwithgcp', traces at https://smith.langchain.com
+2026-09-11 17:22:30 INPUT GUARDRAIL: pass (ok)
+2026-09-11 17:22:30 CACHE HIT (similarity=0.964 vs 'ok i want to do wfh for 5days what is the process') ? skipping retrieval + LLM
+2026-09-11 17:26:13 LangSmith tracing ENABLED - project 'hrragwithgcp', traces at https://smith.langchain.com
+2026-09-11 17:26:19 CACHE MISS (best similarity=0.685)
+2026-09-11 17:26:19 LiteLLM completion() model= gemini-3.1-flash-lite; provider = vertex_ai
+2026-09-11 17:26:19 17:26:19 - LiteLLM:INFO: vertex_and_google_ai_studio_gemini.py:1080 - Warning: Setting temperature < 1.0 for Gemini 3 models (gemini-3.1-flash-lite) can cause infinite loops, degraded reasoning performance, and failure on complex tasks. Strongly recommended to use temperature = 1.0 (default).
+2026-09-11 17:26:19 Warning: Setting temperature < 1.0 for Gemini 3 models (gemini-3.1-flash-lite) can cause infinite loops, degraded reasoning performance, and failure on complex tasks. Strongly recommended to use temperature = 1.0 (default).
+2026-09-11 17:26:19 17:26:19 - LiteLLM:WARNING: vertex_and_google_ai_studio_gemini.py:1085 - DeprecationWarning: `temperature`, `top_p`, and `top_k` continue to function for Gemini 3+ (gemini-3.1-flash-lite) but are planned for removal in a future release. Move sampling guidance into the `system` instructions instead.
+2026-09-11 17:26:19 DeprecationWarning: `temperature`, `top_p`, and `top_k` continue to function for Gemini 3+ (gemini-3.1-flash-lite) but are planned for removal in a future release. Move sampling guidance into the `system` instructions instead.
+2026-09-11 17:26:20 17:26:20 - LiteLLM:INFO: utils.py:1646 - Wrapper: Completed Call, calling success_handler
+2026-09-11 17:26:20 17:26:20 - LiteLLM Router:INFO: router.py:2181 - litellm.completion(model=vertex_ai/gemini-3.1-flash-lite)[32m 200 OK[0m
+2026-09-11 17:26:20 OUTPUT GUARDRAIL: pass (ok)
+2026-09-11 17:26:59 GET 200 https://hr-rag-assistant-1040239158976.us-central1.run.app/_stcore/health
+2026-09-11 17:26:59 GET 200 https://hr-rag-assistant-1040239158976.us-central1.run.app/_stcore/host-config

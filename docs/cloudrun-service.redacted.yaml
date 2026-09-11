@@ -1,0 +1,132 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  annotations:
+    run.googleapis.com/build-enable-automatic-updates: 'false'
+    run.googleapis.com/build-id: 0ba08bf5-afef-44bc-84c5-f9deb4e83743
+    run.googleapis.com/build-image-uri: us-central1-docker.pkg.dev/idyllic-kit-466219-h5/cloud-run-source-deploy/hr-rag-assistant
+    run.googleapis.com/build-name: projects/1040239158976/locations/us-central1/builds/0ba08bf5-afef-44bc-84c5-f9deb4e83743
+    run.googleapis.com/build-source-location: gs://run-sources-idyllic-kit-466219-h5-us-central1/services/hr-rag-assistant/1789143753.250913-a45959f1336d4ca78211d57c34802525.zip#1789143843884105
+    run.googleapis.com/client-name: gcloud
+    run.googleapis.com/client-version: 530.0.0
+    run.googleapis.com/ingress: all
+    run.googleapis.com/ingress-status: all
+    run.googleapis.com/maxScale: '20'
+    run.googleapis.com/operation-id: dacdaa42-6b5f-4a0b-a913-30b0b10aa0aa
+    run.googleapis.com/urls: '["https://hr-rag-assistant-1040239158976.us-central1.run.app","https://hr-rag-assistant-w5a3pcin4a-uc.a.run.app"]'
+    serving.knative.dev/creator: <REDACTED>
+    serving.knative.dev/lastModifier: <REDACTED>
+  creationTimestamp: '2026-09-11T15:35:32.068442Z'
+  generation: 4
+  labels:
+    cloud.googleapis.com/location: us-central1
+  name: hr-rag-assistant
+  namespace: '1040239158976'
+  resourceVersion: AAZbN5Cva54
+  selfLink: /apis/serving.knative.dev/v1/namespaces/1040239158976/services/hr-rag-assistant
+  uid: 63584f6c-8e60-4a5d-98be-b04cb5b2a8c1
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/maxScale: '20'
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 530.0.0
+        run.googleapis.com/startup-cpu-boost: 'true'
+      labels:
+        client.knative.dev/nonce: npwslergyq
+        run.googleapis.com/startupProbeType: Default
+    spec:
+      containerConcurrency: 80
+      containers:
+      - env:
+        - name: PROJECT_ID
+          value: idyllic-kit-466219-h5
+        - name: LOCATION
+          value: us-central1
+        - name: GCS_BUCKET_NAME
+          value: rag-hr-assistant-demo-hr-policies
+        - name: QDRANT_COLLECTION_NAME
+          value: hr_policies
+        - name: QDRANT_NOISY_COLLECTION_NAME
+          value: hr_policies_noisy_demo
+        - name: GUARDRAIL_PROVIDER
+          value: model_armor
+        - name: MODEL_ARMOR_LOCATION
+          value: us
+        - name: MODEL_ARMOR_TEMPLATE_ID
+          value: hr-assistant-guardrail
+        - name: LANGSMITH_TRACING
+          value: 'true'
+        - name: LANGSMITH_ENDPOINT
+          value: https://api.smith.langchain.com
+        - name: LANGSMITH_PROJECT
+          value: hrragwithgcp
+        - name: JINA_API_KEY
+          value: <REDACTED>
+        - name: QDRANT_URL
+          value: <REDACTED>
+        - name: QDRANT_API_KEY
+          value: <REDACTED>
+        - name: GROQ_API_KEY
+          value: <REDACTED>
+        - name: LANGSMITH_API_KEY
+          value: <REDACTED>
+        - name: ALLOWED_EMPLOYEE_EMAILS
+          value: <REDACTED>
+        image: us-central1-docker.pkg.dev/idyllic-kit-466219-h5/cloud-run-source-deploy/hr-rag-assistant@sha256:544b182d6f875e4d60e25f7c67862aaff89fa9227a095aa6eb045985ca959872
+        ports:
+        - containerPort: 8080
+          name: http1
+        resources:
+          limits:
+            cpu: 1000m
+            memory: 512Mi
+        startupProbe:
+          failureThreshold: 1
+          periodSeconds: 240
+          tcpSocket:
+            port: 8080
+          timeoutSeconds: 240
+        volumeMounts:
+        - mountPath: /app/.streamlit
+          name: streamlit-auth-kis-xob-row
+      serviceAccountName: 1040239158976-compute@developer.gserviceaccount.com
+      timeoutSeconds: 300
+      volumes:
+      - name: streamlit-auth-vub-nuz-huf
+        secret:
+          items:
+          - key: latest
+            path: secrets.toml
+          secretName: streamlit-auth
+      - name: streamlit-auth-kis-xob-row
+        secret:
+          items:
+          - key: latest
+            path: secrets.toml
+          secretName: streamlit-auth
+  traffic:
+  - latestRevision: true
+    percent: 100
+status:
+  address:
+    url: https://hr-rag-assistant-w5a3pcin4a-uc.a.run.app
+  conditions:
+  - lastTransitionTime: '2026-09-11T16:27:49.008286Z'
+    status: 'True'
+    type: Ready
+  - lastTransitionTime: '2026-09-11T16:27:41.664806Z'
+    status: 'True'
+    type: ConfigurationsReady
+  - lastTransitionTime: '2026-09-11T16:27:48.976685Z'
+    status: 'True'
+    type: RoutesReady
+  latestCreatedRevisionName: hr-rag-assistant-00004-dbc
+  latestReadyRevisionName: hr-rag-assistant-00004-dbc
+  observedGeneration: 4
+  traffic:
+  - latestRevision: true
+    percent: 100
+    revisionName: hr-rag-assistant-00004-dbc
+  url: https://hr-rag-assistant-w5a3pcin4a-uc.a.run.app

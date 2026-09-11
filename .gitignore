@@ -1,0 +1,34 @@
+# Secrets — NEVER commit these
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+deploy.env.yaml
+*.pem
+*.key
+*-service-account*.json
+
+# Virtualenvs
+hragentenv/
+.venv/
+venv/
+env/
+
+# Python
+**/__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Local dev state
+.langgraph_api/
+notes_tkcr.txt
+
+# Exported cloud evidence: the UNREDACTED service definition contains live
+# API keys as plain env vars. Only the redacted copy is committed.
+docs/cloudrun-service.yaml
+docs/*-unredacted.*
+
+# OS
+Thumbs.db
+.DS_Store

@@ -1,0 +1,30 @@
+# Secrets
+.env
+.env.example
+.streamlit/secrets.toml
+
+# VCS / tooling
+.git
+.gitignore
+.claude/
+.langgraph_api/
+
+# Python bytecode / caches (any depth)
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+
+# Virtualenvs
+hragentenv/
+.venv/
+venv/
+env/
+
+# Not needed in the image
+docs/
+commands/
+results/
+**/*.md
+notes_tkcr.txt
+langgraph.json
+deploy.env.yaml
