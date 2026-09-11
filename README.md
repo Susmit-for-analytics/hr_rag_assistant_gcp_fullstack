@@ -708,11 +708,32 @@ version alone never reaches a running revision.
 ### Tearing it down
 
 ```bash
+# The compute — stops all meaningful billing immediately
 gcloud run services delete hr-rag-assistant --region=us-central1 --project=$PROJECT_ID
+
+# The container images. Deleting the Cloud Run service does NOT remove these:
+# every `--source .` deploy pushes a fresh ~1GB image (the Dockerfile bakes in
+# the BM25 model), and they keep accruing storage charges. This was 1,076 MB
+# after four deploys — the single largest leftover, and the easiest to forget.
+gcloud artifacts repositories delete cloud-run-source-deploy \
+  --location=us-central1 --project=$PROJECT_ID
+
+# Config and data
 gcloud secrets delete streamlit-auth --project=$PROJECT_ID
 gcloud model-armor templates delete hr-assistant-guardrail --location=us --project=$PROJECT_ID
-gcloud storage rm -r gs://<your-bucket>
+gcloud storage rm -r gs://<your-bucket>                          # the document corpus
+gcloud storage rm -r gs://run-sources-$PROJECT_ID-us-central1    # Cloud Build source staging
 ```
+
+Three things worth knowing:
+
+- **Model Armor bills per sanitization request**, so an idle template costs
+  nothing once the service is gone — delete it for tidiness, not for billing.
+- **Qdrant Cloud, Jina, Groq, and LangSmith are separate vendors.** Removing
+  GCP resources does not touch them; clean those up in their own consoles.
+- **Check what else lives in the project before deleting broadly.** Secrets and
+  buckets from unrelated work can sit alongside these — delete by name, never
+  by wildcard.
 
 ---
 
